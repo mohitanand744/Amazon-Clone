@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+/***** Colors *****/
+
+:root {
+  --bg-color-1: #131921;
+  --bg-color-2: #232f3e;
+  --bg-color-3: #37475a;
+  --main-bg-color: #e3e6e6;
+  --search-icon-bg: #f3a847;
+  --dropdown-bg: #d4d4d4;
+  --white-color: #fff;
+  --fadded-text: #585858;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+/***** Navbar Section *****/
+
+nav {
+  background-color: var(--bg-color-1);
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0 1%;
+  justify-content: space-between;
+  color: #fff;
+
+  & .nav-text {
+    display: flex;
+    align-items: end;
+    padding: 9px 5px;
+
+    & .text {
+      & p {
+        font-size: 1.2rem;
+      }
+      & b {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  & .search-bar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: #fff;
+    max-width: 150rem;
+    height: 4rem;
+    overflow: hidden;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+
+    & .nav-dropdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.233rem;
+      background-color: var(--dropdown-bg);
+      color: #666666;
+      height: 100%;
+      width: 7%;
+    }
+
+    & input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      padding-left: 2rem;
+    }
+
+    & .Nav-search-icon {
+      height: 100%;
+      width: 6%;
+      padding: 8px;
+      background-color: var(--search-icon-bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  & .nav-language-options {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.4rem;
+    padding: 9px 5px;
+  }
+
+  & .nav-cart-icon {
+    display: flex;
+    align-items: end;
+    padding: 9px 5px;
+    font-size: 1.4rem;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 9px 5px;
+    & span {
+      padding-bottom: 0.4rem;
+      margin-left: -0.1rem;
+    }
+  }
+}
+.hover-box {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.hover-box:hover {
+  border: 2px solid #fff;
+}
+
+.second-nav {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color-2);
+  font-size: 1.4rem;
+  color: #fff;
+
+  & .menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    padding: 5px 8px;
+    margin-left: 1.4rem;
+  }
+
+  & .second-navlist {
+    display: flex;
+    margin-left: 2rem;
+
+    & a {
+      color: #fff;
+      padding: 9px 8px;
+    }
+  }
+}
+
+/***** End Navbar Section *****/
+
+/***** slider Section *****/
+
+.slider ul {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.slider ul img {
+  max-width: 100%;
+  mask-image: linear-gradient(to bottom, #000000 50%, transparent 100%);
+}
+.slider i {
+  position: absolute;
+  top: 30%;
+  background-color: #70707034;
+  z-index: 1;
+  padding: 5vh 1vw;
+  text-decoration: none;
+  color: #0000007b;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  &:hover {
+    font-size: 2.5rem;
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.281);
+  }
+}
+.slider .control_next {
+  right: 0;
+}
+/***** End slider Section *****/
+
+/***** Shopping Carts Section *****/
+
+.shopping-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 1%;
+}
+.sub-margin {
+  margin-top: -25rem;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 450px;
+  background-color: #fff;
+  padding: 2.6rem;
+  cursor: pointer;
+  z-index: 1;
+
+  & h2 {
+    font-size: 2.1rem;
+  }
+  & a {
+    font-size: 1.3rem;
+  }
+
+  & .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    & .product {
+      transition: 0.5s;
+
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      & h4 {
+        font-size: 1.4rem;
+      }
+
+      & p {
+        font-size: 1.3rem;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+.mini-cart {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 200px;
+  background-color: #fff;
+  padding: 2.6rem;
+  cursor: pointer;
+  z-index: 1;
+
+  & h2 {
+    font-size: 2.1rem;
+  }
+
+  & a {
+    font-size: 1.3rem;
+  }
+  & img {
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+  }
+
+  & .cart-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    gap: 1rem;
+  }
+}
+.mini-cart-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  & .mini-tv-ad img {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    object-fit: cover;
+  }
+}
+
+.prime-poster {
+  width: 50vw;
+  height: 420px;
+  background-image: url("../assets/indian-police-force.jpg");
+  background-size: cover;
+  background-position: top;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1%;
+
+  & .top-text h2 {
+    font-size: 2.1rem;
+  }
+  & .top-text p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  & .bottom-text p {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+.Prime-posters-shopping-carts {
+  display: flex;
+  margin: 1.6rem 1%;
+  gap: 1.6rem;
+  color: var(--fadded-text);
+}
+.shopping-cart {
+  display: flex;
+  gap: 1.6rem;
+
+  & .cart {
+    width: 24vw;
+  }
+
+  & .products .product h4 {
+    font-size: 1.2rem;
+  }
+}
+/***** End Shopping Carts Section *****/
+
+/***** scrollbar Section *****/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--search-icon-bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-bg-color);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fadded-text);
+}
+
+/***** End scrollbar Section *****/
