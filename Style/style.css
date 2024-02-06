@@ -22,6 +22,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -467,8 +468,47 @@ nav {
     }
   }
 }
+.submargin {
+  margin: 0;
+
+  & .top-text {
+    border-top: 2px solid #cccbcb85;
+    padding-top: 1rem;
+  }
+}
+.rating {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 0.4rem;
+
+  & img {
+    margin-right: -0.3rem;
+  }
+}
 
 /***** End Products slider Section *****/
+
+/***** Footer Section *****/
+
+.first-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  color: var(--white-color);
+  background-color: var(--bg-color-3);
+  &:hover {
+    background-color: #232e44d0;
+  }
+  & a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+/***** End Footer Section *****/
 
 /***** scrollbar Section *****/
 
