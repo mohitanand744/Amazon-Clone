@@ -26,6 +26,7 @@ html {
 
 body {
   background-color: var(--main-bg-color);
+  cursor: pointer;
 }
 
 /***** Navbar Section *****/
@@ -134,7 +135,7 @@ nav {
   -o-transition: 0.3s;
 }
 .hover-box:hover {
-  border: 2px solid #fff;
+  border: 2px solid #dddddd;
 }
 
 .second-nav {
@@ -192,7 +193,7 @@ nav {
   padding: 5vh 1vw;
   text-decoration: none;
   color: #0000007b;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   cursor: pointer;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -320,7 +321,7 @@ nav {
 
 .prime-poster {
   width: 50vw;
-  height: 420px;
+  height: 450px;
   background-image: url("../assets/indian-police-force.jpg");
   background-size: cover;
   background-position: top;
@@ -362,6 +363,113 @@ nav {
 }
 /***** End Shopping Carts Section *****/
 
+/***** Products slider Section *****/
+
+.products-slider-container {
+  background-color: var(--white-color);
+  margin: 2rem 1%;
+  padding: 2.6rem;
+  position: relative;
+
+  & i {
+    position: absolute;
+    top: 30%;
+    background-color: #18181857;
+    z-index: 1;
+    padding: 5vh 1vw;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.4rem;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    &:hover {
+      font-size: 2.5rem;
+    }
+    &:active {
+      background-color: rgba(160, 112, 112, 0.281);
+    }
+  }
+  & .control_next {
+    right: 0;
+  }
+
+  & .p-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  & .top-text {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    & h2 {
+      font-size: 2.1rem;
+    }
+    & a {
+      font-size: 1.4rem;
+    }
+  }
+
+  & .product-img-container {
+    padding: 2rem;
+    background-color: #dddddd36;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  & .offers-btn-container {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+
+    & a {
+      color: rgb(197, 1, 1);
+      font-weight: bold;
+    }
+
+    & .offer-btn {
+      padding: 0.4rem 0.9rem;
+      background-color: rgb(224, 0, 0);
+      color: var(--white-color);
+    }
+  }
+  & .products-slider {
+    & .price-tag-container {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+      & .price-title {
+        font-size: 1.7rem;
+      }
+      & p {
+        font-size: 1.2rem;
+      }
+    }
+    & .bottom-pera p {
+      font-size: 1.3rem;
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+/***** End Products slider Section *****/
+
 /***** scrollbar Section *****/
 
 /* width */
@@ -376,7 +484,7 @@ nav {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--main-bg-color);
+  background: var(--bg-color-3);
   border-radius: 50px;
 }
 
